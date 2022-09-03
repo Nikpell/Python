@@ -5,4 +5,5 @@
 # - x=34; y=-30 -> 4
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
-
+lst = [i for i in range(-5, 6)]
+print(len(lst))

@@ -1,2 +1,17 @@
 # Напишите программу для. проверки истинности утверждения
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+
+x_list = [False, True, False, False, True, False, True, True]
+y_list = [False, False, True, False, True, True, False, True]
+z_list = [False, False, False, True, False, True, True, True]
+for i in range(8):
+    if (x_list[i] == False and y_list[i] == False and z_list[i] == False):
+        first_parts = not False
+    else:
+        first_parts = not True
+    if (first_parts == (not x_list[i] and not y_list[i] and not z_list[i])):
+        counter = i
+    else:
+        print(f'При значении предикат {x_list[i]}, {y_list[i]}, {z_list[i]} утверждение не истинно!')
+if counter == 7:
+    print(f'При любом значении предикат утверждение истинно!')
