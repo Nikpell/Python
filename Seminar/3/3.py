@@ -3,3 +3,16 @@
 # - список: ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"], ищем: "йцу", ответ: 5 -
 # список: ["йцу", "фыв", "ячс", "цук", "йцукен"], ищем: "йцу", ответ: -1 -
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1 - список: [], ищем: "123", ответ: -1
+
+given_list = ["123", "234", 123, "567"]
+given_substring = "123"
+counter = 0
+for i in range(len(given_list)):
+    if given_list[i] == given_substring:
+        counter += 1
+        if counter == 2:
+            counter = i
+            break
+if counter < 2:
+    counter = -1
+print(f'ответ {counter}')
