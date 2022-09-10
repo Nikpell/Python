@@ -4,3 +4,11 @@
 # тесты
 # k1=22, k2=31, k3=11, k4=91
 # name='Елена', age=31, weight=61, eyes_color='grey'
+
+def biggest_dict(**kwargs):
+    my_dict.update(**kwargs)
+
+
+my_dict = {'first_one': 'we can do it'}
+biggest_dict(k1=22, k2=31, k3=11, k4=91)
+print(my_dict)
