@@ -48,7 +48,7 @@ i = 0
 j = 0
 while i < len(common_list_short):
     while j < len(common_list_long) and i < len(common_list_short):
-        if len(common_list_long[j]) > 1 and len(common_list_short[i]) > 1
+        if len(common_list_long[j]) > 1 and len(common_list_short[i]) > 1:
             if common_list_short[i][1] > common_list_long[j][1]:
                 common_list_long.insert(j, common_list_short[i])
                 i += 1
@@ -84,4 +84,3 @@ if len(common_list_long[-1]) == 1:
 input_string = ' + '.join(common_list_long) + " = 0"
 with open('task43.txt', 'w') as data:
     data.write(input_string)
-
