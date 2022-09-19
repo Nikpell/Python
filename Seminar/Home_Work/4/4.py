@@ -36,3 +36,6 @@ def polinomial(k):
 with open('task42.txt', 'w') as data:
     data.write(polinomial(1))
 data.close()
+
+
+

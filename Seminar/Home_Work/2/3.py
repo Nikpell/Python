@@ -8,3 +8,5 @@ for i in range(1, number + 1):
     subsequence.append(product)
 print(sum(subsequence))
 
+def summa_of_subsequence(numbers):
+    return sum([(1 + 1 / i) ** i for i in range(1, numbers + 1)])

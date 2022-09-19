@@ -9,3 +9,4 @@ for i in range(0, len(num)):
     if num[i].isdigit():
         summa += int(num[i])
 print(summa)
+
