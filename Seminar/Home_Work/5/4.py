@@ -1,4 +1,4 @@
-# сапер изучение
+# сапер изучение tkinter и ООП
 import tkinter as tk
 from random import shuffle
 
