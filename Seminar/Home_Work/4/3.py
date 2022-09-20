@@ -1,6 +1,6 @@
 # Задайте последовательность чисел. Напишите программу, которая выведет список
 # неповторяющихся элементов исходной последовательности.
-# [1, 1, 2, 3, 4, 5, 5] -> [2, 3, 4]
+# [1, 2, 1, 3, 4, 5, 5] -> [2, 3, 4]
 
 def list_of_non_repeated_elemets(list_element):
     i = 0
@@ -12,3 +12,6 @@ def list_of_non_repeated_elemets(list_element):
                 list_element.remove(number)
         i += 1
     return list_element
+
+def new_list_of_non_repeated_elemets(list_element):
+    return list(filter(lambda item: list_element.count(item) < 2, list_element))
