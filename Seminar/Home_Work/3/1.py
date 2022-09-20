@@ -9,4 +9,6 @@ def summa_of_elements_on_odd_position(numbers):
     return result
 
 
-
+def new_summa_of_elements_on_odd_position(numbers):
+    del numbers[::2]
+    return sum(numbers)

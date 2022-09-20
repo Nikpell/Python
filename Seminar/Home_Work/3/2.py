@@ -16,4 +16,7 @@ def list_summa_of_pair(numbers):
     return summa_pair
 
 
-
+def new_list_summa_of_pair(numbers):
+    if len(numbers) % 2 != 0:
+        numbers.insert(len(numbers) // 2 + 1, numbers[len(numbers) // 2])
+    return [numbers[i] * numbers[-1 - i] for i in range(len(numbers) // 2)]
