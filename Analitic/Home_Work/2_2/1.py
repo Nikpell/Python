@@ -12,11 +12,9 @@ def summa_digit_one_string(number: str):
 #     while number != 0:
 #         if number % 1 != 0:
 #             number *= 10
-#             print(number)
 #         else:
 #             summa += number % 10
 #             number //= 10
-#             print(number)
 #     return summa
 
 # number = input('Введите число: ')
