@@ -37,5 +37,5 @@ def polynomial(exponent: int):
     return ''.join(my_list)[3:]
 
 
-with open('1.txt', 'w') as data:
-    data.write(polynomial(10))
+with open('2.txt', 'w') as data:
+    data.write(polynomial(11))
