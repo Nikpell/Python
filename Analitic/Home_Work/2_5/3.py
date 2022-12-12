@@ -1,11 +1,8 @@
 # Создайте программу для игры в ""Крестики-нолики"".
-# Найденная в инете, разобранная. Пытаюсь сделать подобное свое
+# Найденная в инете, разобранная.
 
 from tkinter import *
 import random
-
-
-
 root = Tk()
 root.title('Criss-cross')
 game_run = True
@@ -90,9 +87,9 @@ for row in range(3):
     line = []
     for col in range(3):
         button = Button(root, text=' ', width=4, height=2,
-                                font=('Verdana', 20, 'bold'),
-                                background='lavender',
-                                command=lambda row=row, col=col: click(row,col))
+                        font=('Verdana', 20, 'bold'),
+                        background='lavender',
+                        command=lambda row=row, col=col: click(row,col))
         button.grid(row=row, column=col, sticky='nsew')
         line.append(button)
     field.append(line)
