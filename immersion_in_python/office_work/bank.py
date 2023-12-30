@@ -103,12 +103,10 @@ def menu():
             balance = check_tax(balance)
             balance, count_iter, operation = add(balance, count_iter, operation)
             print_summ(balance)
-            print(operation)
         if user_input == '2':
             balance = check_tax(balance)
             balance, count_iter, operation = get(balance, count_iter, operation)
             print_summ(balance)
-            print(operation)
         if user_input == '3':
             print_summ(balance)
 
