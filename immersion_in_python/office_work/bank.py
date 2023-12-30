@@ -7,12 +7,16 @@
 # Нельзя снять больше, чем на счёте
 # При превышении суммы в 5 млн, вычитать налог на богатство 10% перед каждой операцией, даже ошибочной
 # Любое действие выводит сумму денег
+# Возьмите задачу о банкомате из семинара 2.
+# Разбейте её на отдельные операции — функции. Дополнительно сохраняйте все операции
+# поступления и снятия средств в список.
 MIN_DELTA = 50
 ITER_COUNT = 3
 COMMISSION_PRESENT = 0.015
 COMMISSION_MINIMUM = 30
 COMMISSION_MAXIMUM = 600
 TAX_LIMIT = 5000000
+
 
 
 
@@ -34,7 +38,7 @@ def add_percent(balance):
     return balance * 1.03
 
 
-def add(balance, count_iter):
+def add(balance, count_iter, operation):
     while True:
         delta = input('Введите сумму пополнения: ')
         if delta.isdigit():
@@ -45,14 +49,15 @@ def add(balance, count_iter):
                 break
         else:
             print('Введите число.')
+    operation.append(delta)
     balance += delta
     count_iter += 1
     if count_iter % ITER_COUNT == 0:
         balance = add_percent(balance)
-    return (balance, count_iter)
+    return (balance, count_iter, operation)
 
 
-def get(balance, count_iter):
+def get(balance, count_iter, operation):
     while True:
         delta = input('Введите сумму снятия: ')
         if delta.isdigit():
@@ -60,17 +65,19 @@ def get(balance, count_iter):
             commission = get_percent(delta)
             if delta + commission > balance:
                 print('Недостаточно денег на счете.')
+                break
             elif delta % MIN_DELTA != 0:
                 print('Сумма снятия должна быть кратной 50 рублей.')
             else:
                 balance -= (delta + commission)
                 count_iter += 1
+                operation.append(-delta)
                 break
         else:
             print('Введите число.')
     if count_iter % ITER_COUNT == 0:
         balance = add_percent(balance)
-    return (balance, count_iter)
+    return (balance, count_iter,operation)
 
 
 def print_summ(balance):
@@ -85,6 +92,7 @@ def menu():
     """
     balance = 0
     count_iter = 0
+    operation = []
     while True:
         print(menu_txt)
         while True:
@@ -93,13 +101,14 @@ def menu():
                 break
         if user_input == '1':
             balance = check_tax(balance)
-            balance, count_iter = add(balance, count_iter)
+            balance, count_iter, operation = add(balance, count_iter, operation)
             print_summ(balance)
+            print(operation)
         if user_input == '2':
             balance = check_tax(balance)
-            balance, count_iter = get(balance, count_iter)
-            print(f'Bal {balance}')
+            balance, count_iter, operation = get(balance, count_iter, operation)
             print_summ(balance)
+            print(operation)
         if user_input == '3':
             print_summ(balance)
 
