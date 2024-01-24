@@ -44,6 +44,10 @@ def ask_riddle_dict() -> object:
     yield counter
 
 
+def answer_to_dict(ask, amount):
+    _dict_riddle.update({ask: amount})
 
-def smf():
-    pass
+
+def print_dict_riddle():
+    for key in _dict_riddle:
+        yield print(f'Загадка {key} угадана за {_dict_riddle[key]} попыток')

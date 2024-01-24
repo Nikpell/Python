@@ -15,7 +15,7 @@
 from random import randint
 
 
-def guessfun(string):
+def guess_fun(string):
     old_numbers = {'low': 1, 'hight': 10, 'attempts': 2}
     if string != '':
         dict_ = dict(zip(['low', 'hight', 'attempts'], [int(x) for x in string.split(' ')]))
@@ -35,4 +35,4 @@ def guessfun(string):
 
 
 # if __name__ == '__main__':
-#     print(guessfun())
+#     print(guess_fun())
