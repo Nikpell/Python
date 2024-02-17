@@ -9,7 +9,13 @@ from os import path, mkdir
 import random
 
 
-def create_file_to_folder(extension, folder='', min_len=6, max_len=30, min_bite=30, max_bite=4096, number_file=42):
+def create_file_to_folder(extension: object, folder: object = '', min_len: object = 6, max_len: object = 30,
+                          min_bite: object = 30, max_bite: object = 4096,
+                          number_file: object = 42) -> object:
+    """
+
+    :rtype: object
+    """
     for _ in range(number_file):
         length = random.randint(min_len, max_len)
         num_bite = random.randint(min_bite, max_bite)
@@ -26,3 +32,7 @@ def create_file_to_folder(extension, folder='', min_len=6, max_len=30, min_bite=
                 print(txt_bite, file=f)
         except:
             pass
+
+
+if __name__ == '__main__':
+    create_file_to_folder(extension='txt', )

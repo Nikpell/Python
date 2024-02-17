@@ -1,0 +1,3 @@
+"папка","поддиректории","объем папки","родительская директория","файлы","размер файла"
+"/home/nic/Рабочий стол/Python/immersion_in_python/files","['__pycache__']","20787","/home/nic/Рабочий стол/Python/immersion_in_python","['__init__.py', 'files_rename.py', 'sort_files_name.py', 'files_create.py', 'file_to_folder.py']","[405, 2484, 1010, 2466, 1544]"
+"/home/nic/Рабочий стол/Python/immersion_in_python/files/__pycache__","[]","8782","/home/nic/Рабочий стол/Python/immersion_in_python/files","['__init__.cpython-39.pyc', 'files_rename.cpython-39.pyc', 'file_to_folder.cpython-39.pyc', 'files_create.cpython-39.pyc', 'sort_files_name.cpython-39.pyc']","[482, 2653, 1764, 2760, 1123]"

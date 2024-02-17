@@ -31,7 +31,7 @@ def create_file(extension, min_len=6, max_len=30, min_bite=30, max_bite=4096, nu
             print(txt_bite, file=f)
 
 
-def create_file_with_different_extensions(number_files=2, list_extensions=None):
+def create_file_with_different_extensions(number_files: object = 2, list_extensions: object = None) -> object:
     if list_extensions is None:
         list_extensions = ['txt', 'pdf', 'csv']
     for _ in range(number_files):
@@ -39,4 +39,5 @@ def create_file_with_different_extensions(number_files=2, list_extensions=None):
         create_file(extension=extension, number_file=1)
 
 
-
+if __name__ == '__main__':
+    create_file_with_different_extensions()

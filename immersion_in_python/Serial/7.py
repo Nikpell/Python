@@ -96,4 +96,4 @@ if __name__ == '__main__':
     #     while res != '':
     #         print(res)
     #         res = f.readline()
-    join_file('name.txt', 'new_data.txt')
+    join_file('../office_work/Pack/name.txt', 'new_data.txt')
